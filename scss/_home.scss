@@ -1,0 +1,104 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+  --bg-color: #d9cdf7;
+  --text-color: #271a45;
+}
+
+body {
+  background-color: var(--bg-color);
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+}
+
+body * {
+  color: var(--text-color);
+  font-family: "Lato", sans-serif;
+  line-height: 100%;
+}
+
+#btn-close,
+#animated {
+  display: none;
+}
+
+#app {
+  display: flex;
+  align-items: center;
+  gap: 3.9375rem;
+}
+
+#product-img {
+  position: relative;
+}
+
+#product-img {
+  > img {
+    width: 28.0625rem;
+    height: 16rem;
+    object-fit: cover;
+  }
+
+  button {
+    position: absolute;
+    right: 0;
+
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+  }
+}
+
+html.animated #btn-360,
+html.animated #static {
+  display: none;
+}
+
+html.animated #btn-close,
+html.animated #animated {
+  display: initial;
+}
+
+#product-details {
+  h4 {
+    font-weight: 300;
+    font-size: 0.625rem;
+  }
+
+  h1 {
+    font-family: "Crimson Text", serif;
+
+    font-weight: 600;
+    font-size: 2rem;
+
+    margin-top: 0.75rem;
+  }
+
+  p {
+    margin-top: 0.75rem;
+
+    opacity: 0.67;
+  }
+
+  button {
+    font-size: 0.75rem;
+    line-height: 1rem;
+
+    padding: 0.5rem 1rem;
+
+    background: transparent;
+
+    border: 0.0313rem solid var(--text-color);
+    border-radius: 999px;
+
+    margin-top: 1.25rem;
+  }
+}
